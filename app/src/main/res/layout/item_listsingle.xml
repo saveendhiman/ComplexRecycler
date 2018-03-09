@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@id/llProfileInfo"
+    android:id="@+id/album_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="0dp"
+    android:layout_margin="@dimen/margin_1x"
+    android:foreground="@drawable/ripple" >
+
+    <LinearLayout
+        android:id="@+id/cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.complexrecycler.utils.views.SquareRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/header_album_card">
+
+            <com.complexrecycler.utils.views.SquareImageView
+                android:id="@+id/ivUserImageSingle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+
+        </com.complexrecycler.utils.views.SquareRelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

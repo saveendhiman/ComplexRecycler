@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">ComplexRecycler</string>
+
+    <string name="toast_network_not_available">Please check your internet connection!</string>
+    <string name="warning_network_error">Unable to connect. Please check your internet connection!</string>
+    <string name="back_click_warning">Please click BACK again to exit!</string>
+
+    <string name="no_item">No item found.</string>
+</resources>
