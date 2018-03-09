@@ -11,8 +11,8 @@ This Sample show list of users along with their items with pagination and many o
 offset : Position where you need to start your users.
 limit: number of users you want to fetch in single hit.
 
-1. User items images should be square.
-2. Horizontal and vertical spacings between every image should be equal.
+1. User items images are square.
+2. Horizontal and vertical spacings between every image are equal.
 3. If items are even, then display them 2 in each row.
 4. If items are off, display the first one to span the full row, and show the remaining spanning 2 in each row.
 5. Implemented pagination.
