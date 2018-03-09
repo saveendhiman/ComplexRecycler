@@ -7,11 +7,10 @@
 
 Hi guys, I have made demo application for ComplexRecyclerView in Kotlin. This is the open project for any contributer who want to improve something here.
 
-This Sample include. Show list of users along with their items. Details are as follows :-
-Api : GET http://sd2-hiring.herokuapp.com/api/users?offset=10&limit=8
-
+This Sample show list of users along with their items with pagination and many other things.
 offset : Position where you need to start your users.
 limit: number of users you want to fetch in single hit.
+
 1. User items images should be square.
 2. Horizontal and vertical spacings between every image should be equal.
 3. If items are even, then display them 2 in each row.
