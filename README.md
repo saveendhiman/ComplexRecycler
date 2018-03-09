@@ -1,15 +1,22 @@
-# The Movie Db Demo in Kotlin.
+# Complex RecyclerView in Kotlin.
 
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2a8eb532d98842f6966bc164a896419a)](https://www.codacy.com/app/saveendhiman/SampleApp?utm_source=github.com&utm_medium=referral&utm_content=saveendhiman/SampleApp&utm_campaign=badger)
 [![Twitter](https://img.shields.io/badge/Twitter-@saveendhiman-blue.svg?style=flat)](https://twitter.com/saveendhiman)
-
-[![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat)](https://android-arsenal.com/api?level=14)
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 
-Hi guys, I have made demo application for TheMovieDb in Kotlin. This is the open project for any contributer who want to improve something here.
+Hi guys, I have made demo application for ComplexRecyclerView in Kotlin. This is the open project for any contributer who want to improve something here.
+
+This Sample include. Show list of users along with their items. Details are as follows :-
+Api : GET http://sd2-hiring.herokuapp.com/api/users?offset=10&limit=8
+
+offset : Position where you need to start your users.
+limit: number of users you want to fetch in single hit.
+1. User items images should be square.
+2. Horizontal and vertical spacings between every image should be equal.
+3. If items are even, then display them 2 in each row.
+4. If items are off, display the first one to span the full row, and show the remaining spanning 2 in each row.
+5. Implemented pagination.
 
 It usage of following libraries:
 
@@ -32,23 +39,12 @@ Utils classes.
 
 # Here is what the app gradle look likes.
 
-    buildscript {
-    repositories {
-        maven { url 'https://maven.fabric.io/public' }
-    }
-    dependencies {
-        classpath 'io.fabric.tools:gradle:1.25.1'
-    }
-    }
-
     apply plugin: 'com.android.application'
     apply plugin: 'kotlin-android'
-    apply plugin: 'kotlin-kapt'
     apply plugin: 'kotlin-android-extensions'
-    apply plugin: 'io.fabric'
+    apply plugin: 'kotlin-kapt'
 
     android {
-
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
@@ -59,16 +55,14 @@ Utils classes.
     def versionBuild = 0
 
     defaultConfig {
-        applicationId "com.themoviedbdemo"
+        applicationId "com.complexrecycler"
         minSdkVersion rootProject.ext.minSdkVersion
         vectorDrawables.useSupportLibrary = true
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -79,8 +73,12 @@ Utils classes.
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-     }
-     }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    }
 
     dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -109,18 +107,14 @@ Utils classes.
     compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
     compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
 
-    compile("com.crashlytics.sdk.android:crashlytics:$rootProject.ext.crashVersion@aar")
-            {
-                transitive = true
-            }
     compile "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
-    compile "com.miguelcatalan:materialsearchview:$rootProject.ext.materialsearchVersion"
 
-    }
+     }
+
 
 #Start from
 
-minSdkVersion 14
+minSdkVersion 16
 
 #LICENSE
 
