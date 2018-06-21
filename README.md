@@ -17,6 +17,13 @@ limit: number of users you want to fetch in single hit.
 4. If items are odd, display the first one to span the full row, and show the remaining spanning 2 in each row.
 5. Implemented pagination.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/6761640/41692821-ee978692-751f-11e8-82ca-2d8093fd0f1a.gif" alt=“Complex Recycler">
+</p>
+
+You can checkout [Youtube] video. 
+
+
 It usage of following libraries:
 
 * [Retrofit2] for REST API.
@@ -137,4 +144,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 [Fabric]:               https://get.fabric.io/#
 [Timber]:               https://github.com/JakeWharton/timber
 
+[Youtube]:        https://youtu.be/SSvEaS0zYPA
 
